@@ -9,10 +9,11 @@ import {Route, Routes, Router} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route export path = "gitpage/" element = {<Home />} />
-        <Route export path = "gitpage/projects" element = {<Project />} />
+      <Routes basename='/'>
+        <Route export path = "/gitpage" element = {<Home />} />
+        <Route export path = "/projects" element = {<Project />} />
       </Routes>
+      <Home />
     </div>
   );
 }
