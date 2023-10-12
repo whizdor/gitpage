@@ -13,7 +13,6 @@ function App() {
         <Route export path = "/gitpage" element = {<Home />} />
         <Route export path = "gitpage/projects" element = {<Project />} />
       </Routes>
-      <Home />
     </div>
   );
 }
