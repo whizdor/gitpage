@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Routes basename='/'>
         <Route export path = "/gitpage" element = {<Home />} />
-        <Route export path = "/projects" element = {<Project />} />
+        <Route export path = "gitpage/projects" element = {<Project />} />
       </Routes>
       <Home />
     </div>
