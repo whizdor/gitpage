@@ -1,7 +1,7 @@
 {
   "name": "gdsc",
   "version": "0.1.0",
-  "homepage": "https://whizdor.github.io/gitpage/",
+  "homepage": "https://whizdor.github.io/gitpage",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
