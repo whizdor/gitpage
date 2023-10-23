@@ -521,8 +521,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /* ***** Project Cell ***** */
+.proj-list{
+  text-decoration: none;
+}
 
-
+.proj-list-header{
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+}
+.proj-list-header p{
+  color: white;
+  font-size: larger;
+  text-decoration: none;
+}
 .proj-list-cell {
   display: flex;
   font-size: 18px;
