@@ -42,7 +42,6 @@ export const Projects = () => {
     }
     const [filteredItems, setFilteredItems] = useState(projects);
     const handleFilter = (startDate, endDate) => {
-
             const filtered = projects.filter((item) => {
                 const deadline = new Date(item.deadline);
                 return ((!startDate || deadline >= startDate) && (!endDate || deadline <= endDate));
@@ -61,16 +60,23 @@ export const Projects = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     {/* <h2>Projects</h2>
                                     <p>Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.</p> */}
-
-                                    <div className="proj-filter-radio">
+                                    <div className="d-flex justify-content-center">
                                         <DateFilter onFilter={handleFilter} />
-                                        <div className="toggler">
+                                        </div>
+                                    <div className="d-flex justify-content-center">
+                                    <div className="proj-filter-radio">
+                                    
+                                        <Row >
+                                        
+                                        <div className="toggler"  >
                                             <p className="toggler-grid">Grid</p>
                                             <div className={view ? "grid" : "list"} onClick={toggleView}>
                                                 <div className="toggler-slider-circle"></div>
                                             </div>
                                             <p className="toggler-list">List</p>
                                         </div>
+                                        </Row>
+                                    </div>
                                     </div>
 
                                     {view ? <Row>

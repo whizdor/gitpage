@@ -102,7 +102,13 @@ export const Banner_Exp = () => {
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={img} />
+                    {projects.map((project, index) => {
+                                        if (index == data.index)
+                                            return (
+                                                    <img src={require("../assets/img/"+project.imgUrl+".jpg")} />
+                                            )
+                                    })}
+                        
                     </Col>
                 </Row>
             </Container>

@@ -8,7 +8,7 @@ export const ProjectList=({ index, title, description, imgUrl,deadline,number})=
         console.log("some thing")
     }
     return(
-        <Link to="/projects" onClick={handleListClick} className="proj-list">
+        <Link to="/project_details" onClick={handleListClick} className="proj-list">
         <div className="proj-list-cell" >
             <p className="proj-list-cell-index">{title}</p>
             <p className="proj-list-cell-deadline">{deadline}</p>
