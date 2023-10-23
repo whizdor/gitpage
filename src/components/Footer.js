@@ -5,6 +5,7 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="footer">
       <Container>
@@ -19,6 +20,7 @@ export const Footer = () => {
               <a href="#"><img src={navIcon3} alt="Icon" /></a>
             </div>
             <p>Indian Institute of Technology, Kanpur</p>
+            <p>&copy; {currentYear} GDSC IIT Kanpur. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

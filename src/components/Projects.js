@@ -101,8 +101,7 @@ export const Projects = () => {
                                     <p>Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.</p>
 
                                     <div className="proj-filter-radio">
-                                        {/* <DateFilter onFilter={handleFilter} /> */}
-                                        <div>   </div>
+                                        <DateFilter onFilter={handleFilter} />
                                         <div className="toggler">
                                             <p className="toggler-grid">Grid</p>
                                             <div className={view ? "grid" : "list"} onClick={toggleView}>
@@ -114,7 +113,7 @@ export const Projects = () => {
 
                                     {view ? <Row>
                                         {
-                                            projects.map((project, index) => {
+                                            filteredItems.map((project, index) => {
                                                 return (
                                                     <ProjectCard
                                                         key={index}
@@ -125,13 +124,19 @@ export const Projects = () => {
                                         }
                                     </Row> :
                                         <div>
+                                            <div className="proj-list-header" >
+                                                <p className="proj-list-header-index">Name</p>
+                                                <p className="proj-list-header-deadline">Deadline</p>
+                                                <p className="proj-list-header-deadline">Participants</p>
+                                            </div>
                                             {
-                                                projects.map((project, index) => {
+                                                
+                                                filteredItems.map((project, index) => {
                                                     return (
                                                         <ProjectList
                                                             key={index}
                                                             {...project}
-                                                            index={index}
+                                                            // index={index}
                                                         />
                                                     )
                                                 })
