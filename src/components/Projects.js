@@ -14,45 +14,6 @@ import Data from './unt.csv';
 
 export const Projects = () => {
 
-    //   const projects = [
-    //     {
-    //       title: "Web Development",
-    //       description: "Design & Development",
-    //       imgUrl: projImg1,
-    //       deadline: new Date('2023-10-7')
-    //     },
-    //     {
-    //       title: "Web Development",
-    //       description: "Design & Development",
-    //       imgUrl: projImg2,
-    //       deadline: new Date('2023-10-7')
-    //     },
-    //     {
-    //       title: "Web Development",
-    //       description: "Design & Development",
-    //       imgUrl: projImg3,
-    //       deadline: new Date('2023-10-7')
-    //     },
-    //     {
-    //       title: "Web Development",
-    //       description: "Design & Development",
-    //       imgUrl: projImg1,
-    //       deadline: new Date('2023-10-7')
-    //     },
-    //     {
-    //       title: "Web Development",
-    //       description: "Design & Development",
-    //       imgUrl: projImg2,
-    //       deadline: new Date('2023-10-7')
-    //     },
-    //     {
-    //       title: "Web Development",
-    //       description: "Design & Development",
-    //       imgUrl: projImg3,
-    //       deadline: new Date('2023-10-7')
-    //     },
-    //   ];
-
     const [projects, setData] = useState([]);
 
     useEffect(() => {
@@ -81,10 +42,11 @@ export const Projects = () => {
     }
     const [filteredItems, setFilteredItems] = useState(projects);
     const handleFilter = (startDate, endDate) => {
-        const filtered = projects.filter((item) => {
-            const deadline = new Date(item.deadline);
-            return (!startDate || deadline >= startDate) && (!endDate || deadline <= endDate);
-        });
+
+            const filtered = projects.filter((item) => {
+                const deadline = new Date(item.deadline);
+                return ((!startDate || deadline >= startDate) && (!endDate || deadline <= endDate));
+            });
 
         setFilteredItems(filtered);
     };
@@ -97,8 +59,8 @@ export const Projects = () => {
                         <TrackVisibility>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                    <h2>Projects</h2>
-                                    <p>Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.</p>
+                                    {/* <h2>Projects</h2>
+                                    <p>Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.</p> */}
 
                                     <div className="proj-filter-radio">
                                         <DateFilter onFilter={handleFilter} />
@@ -131,11 +93,11 @@ export const Projects = () => {
                                             </div>
                                             {
                                                 
-                                                filteredItems.map((project, index) => {
+                                                filteredItems.map((filtered, index) => {
                                                     return (
                                                         <ProjectList
                                                             key={index}
-                                                            {...project}
+                                                            {...filtered}
                                                             // index={index}
                                                         />
                                                     )

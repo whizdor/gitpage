@@ -1,10 +1,19 @@
+@font-face {
+  font-family: "GoogleSansBold";
+  src: url("assets/fonts/GoogleSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "GoogleSans";
+  src: url("assets/fonts/GoogleSans-Regular.ttf");
+}
 
 /************ Default Css ************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'GoogleSans';
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -20,19 +29,21 @@ html {
   scroll-padding-top: 75px;
 }
 
+
+
 body {
-  font-weight: 400;
   overflow-x: hidden;
   position: relative;
   background-color: #ffffff !important;
   color: #000000 !important;
-  font-family: 'Poppins', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
+  font-family: 'GoogleSansBold';
+  font-weight: 700;
 }
 
 p, a, li, button, ul {
@@ -40,10 +51,12 @@ p, a, li, button, ul {
   padding: 0;
   line-height: normal;
   text-decoration: none;
+  font-family: 'GoogleSans';
 }
 
 a:hover {
   text-decoration: none;
+  font-family: 'GoogleSans';
 }
 
 img {
@@ -79,12 +92,22 @@ input:focus, textarea:focus, select:focus {
   display:flex;
   flex-direction: row;
   align-items: center;
+  
 }
 
 .nav-google-name.web{
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 15px;
   font-size: 20px;
+  color: #5f6368;
+  font-weight: 700;
+}
+
+.nav-google-name.web2{
+  margin-top: 0px;
+  margin-left: 15px;
+  font-size: 16px;
+  color: #5f6368;
 }
 
 
@@ -119,7 +142,6 @@ nav.navbar a.navbar-brand {
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #000000 !important;
-  letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
@@ -408,7 +430,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.1em;
 }
 .proj-txtx span {
-  font-style: italic;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
@@ -515,7 +536,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .link h3
 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'GoogleSans';
     font-size: 24px;
   color: black;
 }
@@ -659,8 +680,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin-left: 40%;
+  margin-bottom: 40px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

@@ -54,9 +54,9 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h1>{`Hi!, `}<span class="google-red">G</span><span class="google-yellow">D</span><span class="google-blue">S</span><span class="google-green">C</span>{` IITK welcomes you to `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Google Developer Student Clubs (GDSC) are community-led groups for students interested in technology and software development. Sponsored by Google, GDSCs provide a platform for students to learn, collaborate, and apply their skills to real-world projects. These clubs offer a wide range of workshops, events, and hands-on experiences that help members gain practical knowledge and grow as developers. GDSCs are hubs for fostering innovation, connecting with like-minded individuals, and contributing to the tech community. Whether you're a beginner or an experienced developer, GDSCs are an excellent place to explore the ever-evolving world of technology.</p>
-                  {/* <button onClick={() => console.log('connect')}>Let’s Code <ArrowRightCircle size={25} /></button> */}
+                <pre> {'\n\n\n'}</pre>
+                <h1>{'\n \n Projects'}</h1>
+                <p>Google Developer Student Clubs (GDSC) projects encompass a diverse range of innovative initiatives driven by the collaborative efforts of student developers. These projects reflect the GDSC mission to foster technological skills and problem-solving abilities among students while creating a positive impact on their communities and the world. GDSC projects often span various domains, including mobile app development, web applications, machine learning, and more.</p>
               </div>}
             </TrackVisibility>
           </Col>

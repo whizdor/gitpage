@@ -30,7 +30,7 @@ const DateFilter = ({ onFilter }) => {
         <DatePicker selected={endDate} onChange={handleEndDateChange} />
       </div>
 
-      <button className="filter-button" onClick={applyFilter}>Apply</button>
+      <button className="filter-button" onClick={applyFilter}>Get Projects</button>
     </div>
   );
 };

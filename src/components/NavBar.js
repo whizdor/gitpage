@@ -28,8 +28,8 @@ export const NavBar = () => {
             <div className="nav-google">
             <img src={logo} alt="Logo" className="Logo" />
             <Col>
-            <h2 className="nav-google-name web">Google Developer Student Club</h2>
-
+            <div className="nav-google-name web">Google Developer Student Club</div>
+            <div className="nav-google-name web2">Indian Institute of Technology, Kanpur</div>
             </Col>
           </div>
           </Navbar.Brand>
@@ -46,12 +46,11 @@ export const NavBar = () => {
             <span className="navbar-text">
               <div className="social-icon">
                 <a href="https://www.linkedin.com/company/gdsc-iit-kanpur/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="" /></a>
-                <a ><img src={navIcon2} alt="" /></a>
                 <a href="https://www.instagram.com/gdsc.iitk/" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="" /></a>
               </div>
-              <HashLink to='#connect'>
+              <a href="https://gdsc.community.dev/indian-institute-of-technology-iit-kanpur/" target="_blank" rel="noopener noreferrer">
                 <button className="vvd"><span>Join Us</span></button>
-              </HashLink>
+              </a>
             </span>
           </Navbar.Collapse>
         </Container>

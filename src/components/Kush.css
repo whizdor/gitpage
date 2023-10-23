@@ -1,10 +1,20 @@
 
+@font-face {
+  font-family: "GoogleSansBold";
+  src: url("../assets/fonts/GoogleSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "GoogleSans";
+  src: url("../assets/fonts/GoogleSans-Regular.ttf");
+}
+
 /************ Default Css ************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'GoogleSans';
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
        -khtml-user-select: none; /* Konqueror HTML */
